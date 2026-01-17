@@ -84,6 +84,42 @@ speckit-autopilot help                # Show help
 
 **Important:** The MCP server runs automatically. Cursor manages it as a subprocess. Just restart Cursor after setup.
 
+## How to Use
+
+### Using `/speckit.autopilot` Command
+
+Type the command in Cursor's chat and describe your feature:
+
+![Using speckit.autopilot command](docs/images/speckit-autopilot-usage.png)
+
+The command automatically runs the complete workflow: specify → clarify → plan → tasks → implement → review.
+
+### Using `/speckit.review` Command
+
+Run code review on your current feature:
+
+![Using speckit.review command](docs/images/speckit-review-usage.png)
+
+The review tool checks build errors, code quality, and fixes issues automatically.
+
+### Workflow Visualization
+
+**Workflow Flow:**
+
+```mermaid
+graph LR
+    A[Feature Description] --> B[Specify]
+    B --> C[Clarify]
+    C --> D[Plan]
+    D --> E[Tasks]
+    E --> F[Implement]
+    F --> G[Review]
+    G --> H[Complete]
+    
+    style A fill:#e1f5ff
+    style H fill:#d4edda
+```
+
 ## Commands
 
 ### `/speckit.autopilot`
